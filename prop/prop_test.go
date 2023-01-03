@@ -76,8 +76,10 @@ func TestProp(t *testing.T) {
 			attackRootPercent:       10,
 		},
 	})
+	// 100 * 1.5 * 1.2 * 1.1 = 198
 	fmt.Printf("%+v\n", tree.RootNode.PropResult)
 
+	// 120 * 1.5 * 1.2 * 1.1 = 396
 	tree.ChangeModuleProp(equipLevelModuleId, map[int]float64{attackAbsolute: 200})
 	fmt.Printf("%+v\n", tree.RootNode.PropResult)
 }
