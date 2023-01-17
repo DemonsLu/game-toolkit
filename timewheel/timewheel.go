@@ -150,7 +150,7 @@ func (tw *TimeWheel) AddTimer(startOffsetTick uint64, cb TimerCallback, execCoun
 		wheel := tw.Wheels[i]
 		slotLen := len(wheel.Slots)
 		if int(offset) < slotLen {
-			targetIndex := wheel.CurIndex + int(offset)%slotLen
+			targetIndex := wheel.CurIndex + int(offset)
 			wheel.Slots[targetIndex].Add(timer)
 			isSuccess = true
 			break
